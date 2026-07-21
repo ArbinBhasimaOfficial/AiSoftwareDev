@@ -4,114 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Day1/assignment/chat-app-css/chat-app-css-illustration-master/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
 
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <title>Frontend Mentor | [Chat App Challenge]</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 0.6875rem; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
-<div class="bg-shape-left"></div>
-  <div class="bg-shape-right"></div>
 
-  <!-- Main Content Layout -->
+  <div class="bg-shape-left"></div>
+  <div class="bg-shape-right"></div>
   <main class="container">
 
-    <!-- CSS Phone Illustration -->
-    <div class="phone-wrapper">
-      <div class="phone">
-        <div class="phone-screen">
-          
-          <!-- Header -->
-          <div class="phone-header">
-            <div class="phone-notch"></div>
-            <div class="header-content">
-              <span class="back-arrow">&#10094;</span>
-              <img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" alt="Samuel Green">
-              <div class="user-info">
-                <span class="user-name">Samuel Green</span>
-                <span class="user-status">Available to Walk</span>
-              </div>
-              <span class="menu-dots">&#8942;</span>
-            </div>
+    <div class="phone">
+      <div class="screen">
+        
+        <div class="header">
+          <span>&#10094;</span>
+          <img class="avatar" src="/Day1/assignment/chat-app-css/chat-app-css-illustration-master/images/avatar.jpg" alt="Samuel">
+          <div class="user">
+            <h4>Samuel Green</h4>
+            <p>Available to Walk</p>
           </div>
-
-          <!-- Chat Body -->
-          <div class="chat-body">
-            <div class="message msg-left">
-              That sounds great. I’d be happy with that.
-            </div>
-            
-            <div class="message msg-left">
-              Could you send over some pictures of your dog, please?
-            </div>
-
-            <div class="dog-images">
-              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=150" alt="Dog 1">
-              <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=150" alt="Dog 2">
-              <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&q=80&w=150" alt="Dog 3">
-            </div>
-
-            <div class="message msg-right">
-              Here are a few pictures. She’s a happy girl!
-            </div>
-
-            <div class="message msg-right">
-              Can you make it?
-            </div>
-
-            <div class="message msg-left">
-              She looks so happy! The time we discussed works. How long shall I take her out for?
-            </div>
-
-            <div class="option-card">
-              <div class="option-info">
-                <span class="radio-btn"></span>
-                <span class="option-title">30 minute walk</span>
-              </div>
-              <span class="price">$29</span>
-            </div>
-
-            <div class="option-card">
-              <div class="option-info">
-                <span class="radio-btn"></span>
-                <span class="option-title">1 hour walk</span>
-              </div>
-              <span class="price">$49</span>
-            </div>
-
-            <!-- Input Bar -->
-            <div class="input-container">
-              <span class="placeholder">Type a message…</span>
-              <button class="send-btn" aria-label="Send message">&#10095;</button>
-            </div>
-          </div>
-
+          <span>&#8942;</span>
         </div>
+
+        <div class="chat">
+          <div class="msg left">That sounds great. I’d be happy with that.</div>
+          <div class="msg left">Could you send over some pictures of your dog, please?</div>
+
+          <div class="gallery">
+            <img src="/Day1/assignment/chat-app-css/chat-app-css-illustration-master/images/dog-image-1.jpg" alt="Dog">
+            <img src="/Day1/assignment/chat-app-css/chat-app-css-illustration-master/images/dog-image-2.jpg" alt="Dog">
+            <img src="/Day1/assignment/chat-app-css/chat-app-css-illustration-master/images/dog-image-3.jpg" alt="Dog">
+          </div>
+
+          <div class="msg right">Here are a few pictures. She’s a happy girl!</div>
+          <div class="msg right">Can you make it?</div>
+          <div class="msg left">She looks so happy! The time works. How long shall I take her out for?</div>
+
+          <div class="option">
+            <span style="display:flex; gap:6px; align-items:center;">
+              <span class="radio"></span> 30 minute walk
+            </span>
+            <strong>$29</strong>
+          </div>
+
+          <div class="option">
+            <span style="display:flex; gap:6px; align-items:center;">
+              <span class="radio"></span> 1 hour walk
+            </span>
+            <strong>$49</strong>
+          </div>
+
+          <div class="input-box">
+            <input type="text" class="message-input" placeholder="Type a message…" />
+            <button class="send-btn">&#10095;</button>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <!-- Text Information -->
-    <div class="text-content">
+    <div class="info">
       <h1>Simple booking</h1>
-      <p>
-        Stay in touch with our dog walkers through the chat interface. This makes it easy to
-        discuss arrangements and make bookings. Once the walk has been completed you can rate
-        your walker and book again all through the chat.
-      </p>
+      <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
     </div>
-
   </main>
 
-  <!-- Footer -->
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Arbin Bhasima</a>.
   </footer>
 </body>
 </html>
