@@ -1,0 +1,335 @@
+/* CSS Reset & Variables */
+    :root {
+      /* Primary Colors */
+      --color-sub-heading: hsl(276, 100%, 81%);
+      --color-chat-left: hsl(276, 55%, 52%);
+      --color-chat-right: hsl(271, 15%, 43%);
+      --color-placeholder: hsl(206, 6%, 79%);
+      --color-main-heading: hsl(271, 36%, 24%);
+      --color-paragraph: hsl(270, 7%, 64%);
+
+      /* Gradient Colors */
+      --gradient-magenta: hsl(293, 100%, 63%);
+      --gradient-violet: hsl(264, 100%, 61%);
+
+      /* Secondary Colors */
+      --color-white: hsl(0, 0%, 100%);
+      --color-app-bg: hsl(270, 20%, 96%);
+      --color-submit-btn: hsl(271, 36%, 24%);
+      --color-radio-outline: hsl(289, 100%, 72%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: var(--color-app-bg);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Background Decorative Shapes */
+    .bg-shape-left {
+      position: absolute;
+      top: 0;
+      left: -100px;
+      width: 500px;
+      height: 85vh;
+      max-height: 700px;
+      background: linear-gradient(135deg, var(--gradient-magenta), var(--gradient-violet));
+      border-radius: 0 0 250px 250px;
+      z-index: 1;
+    }
+
+    .bg-shape-right {
+      position: absolute;
+      bottom: 0;
+      right: -100px;
+      width: 500px;
+      height: 85vh;
+      max-height: 700px;
+      background-color: rgba(223, 213, 233, 0.3);
+      border-radius: 250px 250px 0 0;
+      z-index: 1;
+    }
+
+    /* Main Container */
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 125px;
+      min-height: 100vh;
+      padding: 40px 20px;
+      width: 100%;
+      max-width: 1200px;
+      z-index: 10;
+      position: relative;
+    }
+
+    /* --- Phone Frame --- */
+    .phone-wrapper {
+      flex-shrink: 0;
+    }
+
+    .phone {
+      width: 248px;
+      background-color: var(--color-white);
+      border-radius: 30px;
+      padding: 10px;
+      box-shadow: 0 20px 40px -10px rgba(62, 39, 83, 0.25);
+      position: relative;
+    }
+
+    .phone-screen {
+      background-color: var(--color-app-bg);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Phone Header */
+    .phone-header {
+      background: linear-gradient(to right, var(--gradient-violet), var(--gradient-magenta));
+      padding: 30px 15px 12px 15px;
+      border-radius: 20px 20px 6px 6px;
+      position: relative;
+      color: var(--color-white);
+    }
+
+    .phone-notch {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 130px;
+      height: 18px;
+      background-color: var(--color-white);
+      border-radius: 0 0 12px 12px;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .back-arrow {
+      font-size: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid var(--color-white);
+      object-fit: cover;
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .user-name {
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .user-status {
+      font-size: 8px;
+      color: var(--color-sub-heading);
+      opacity: 0.8;
+    }
+
+    .menu-dots {
+      font-size: 10px;
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    /* Chat Messages Body */
+    .chat-body {
+      padding: 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .message {
+      font-size: 8px;
+      line-height: 1.4;
+      padding: 7px 10px;
+      max-width: 68%;
+    }
+
+    .msg-left {
+      background-color: rgba(223, 213, 233, 0.4);
+      color: var(--color-chat-left);
+      border-radius: 10px 10px 10px 4px;
+      align-self: flex-start;
+    }
+
+    .msg-right {
+      background-color: var(--color-white);
+      color: var(--color-chat-right);
+      border-radius: 10px 10px 4px 10px;
+      align-self: flex-end;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+    }
+
+    .dog-images {
+      display: flex;
+      gap: 8px;
+      align-self: flex-end;
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+
+    .dog-images img {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    /* Pricing Option Cards */
+    .option-card {
+      background: linear-gradient(to right, var(--gradient-magenta), var(--gradient-violet));
+      color: var(--color-white);
+      border-radius: 10px 10px 10px 4px;
+      padding: 8px 12px;
+      width: 75%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      align-self: flex-start;
+    }
+
+    .option-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .radio-btn {
+      width: 12px;
+      height: 12px;
+      border: 1px solid var(--color-radio-outline);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .option-title {
+      font-size: 8px;
+      opacity: 0.9;
+    }
+
+    .price {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* Input Field */
+    .input-container {
+      background-color: var(--color-white);
+      border-radius: 20px;
+      padding: 5px 6px 5px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    }
+
+    .placeholder {
+      font-size: 9px;
+      color: var(--color-placeholder);
+    }
+
+    .send-btn {
+      width: 25px;
+      height: 25px;
+      background-color: var(--color-submit-btn);
+      color: var(--color-white);
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* --- Text Section --- */
+    .text-content {
+      max-width: 450px;
+      text-align: left;
+    }
+
+    .text-content h1 {
+      font-size: 2.5rem;
+      color: var(--color-main-heading);
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .text-content p {
+      color: var(--color-paragraph);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    /* --- Footer --- */
+    .attribution {
+      font-size: 0.6875rem;
+      text-align: center;
+      padding: 15px 0;
+      position: relative;
+      z-index: 10;
+      width: 100%;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    /* --- Responsive Queries --- */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        gap: 60px;
+        padding-top: 70px;
+      }
+
+      .text-content {
+        text-align: center;
+      }
+
+      .bg-shape-left {
+        width: 375px;
+        height: 500px;
+        left: -175px;
+      }
+
+      .bg-shape-right {
+        width: 375px;
+        height: 500px;
+        right: -175px;
+      }
+    }

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
 
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
@@ -15,36 +16,101 @@
   </style>
 </head>
 <body>
+<div class="bg-shape-left"></div>
+  <div class="bg-shape-right"></div>
 
-  Samuel Green
-  Available to Walk
+  <!-- Main Content Layout -->
+  <main class="container">
 
-  That sounds great. I’d be happy with that.
+    <!-- CSS Phone Illustration -->
+    <div class="phone-wrapper">
+      <div class="phone">
+        <div class="phone-screen">
+          
+          <!-- Header -->
+          <div class="phone-header">
+            <div class="phone-notch"></div>
+            <div class="header-content">
+              <span class="back-arrow">&#10094;</span>
+              <img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" alt="Samuel Green">
+              <div class="user-info">
+                <span class="user-name">Samuel Green</span>
+                <span class="user-status">Available to Walk</span>
+              </div>
+              <span class="menu-dots">&#8942;</span>
+            </div>
+          </div>
 
-  Could you send over some pictures of your dog, please?
+          <!-- Chat Body -->
+          <div class="chat-body">
+            <div class="message msg-left">
+              That sounds great. I’d be happy with that.
+            </div>
+            
+            <div class="message msg-left">
+              Could you send over some pictures of your dog, please?
+            </div>
 
-  Here are a few pictures. She’s a happy girl!
+            <div class="dog-images">
+              <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=150" alt="Dog 1">
+              <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=150" alt="Dog 2">
+              <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&q=80&w=150" alt="Dog 3">
+            </div>
 
-  Can you make it?
+            <div class="message msg-right">
+              Here are a few pictures. She’s a happy girl!
+            </div>
 
-  She looks so happy! The time we discussed works. How long shall I take her out for?
+            <div class="message msg-right">
+              Can you make it?
+            </div>
 
-  30 minute walk
-  $29
+            <div class="message msg-left">
+              She looks so happy! The time we discussed works. How long shall I take her out for?
+            </div>
 
-  1 hour walk
-  $49
+            <div class="option-card">
+              <div class="option-info">
+                <span class="radio-btn"></span>
+                <span class="option-title">30 minute walk</span>
+              </div>
+              <span class="price">$29</span>
+            </div>
 
-  Type a message…
+            <div class="option-card">
+              <div class="option-info">
+                <span class="radio-btn"></span>
+                <span class="option-title">1 hour walk</span>
+              </div>
+              <span class="price">$49</span>
+            </div>
 
-  Simple booking
+            <!-- Input Bar -->
+            <div class="input-container">
+              <span class="placeholder">Type a message…</span>
+              <button class="send-btn" aria-label="Send message">&#10095;</button>
+            </div>
+          </div>
 
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to
-  discuss arrangements and make bookings. Once the walk has been completed you can rate
-  your walker and book again all through the chat.
+        </div>
+      </div>
+    </div>
 
+    <!-- Text Information -->
+    <div class="text-content">
+      <h1>Simple booking</h1>
+      <p>
+        Stay in touch with our dog walkers through the chat interface. This makes it easy to
+        discuss arrangements and make bookings. Once the walk has been completed you can rate
+        your walker and book again all through the chat.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </footer>
 </body>
