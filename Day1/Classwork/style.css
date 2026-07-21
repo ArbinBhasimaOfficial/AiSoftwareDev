@@ -1,0 +1,31 @@
+form div {
+  padding: 10px;
+  background-color: cyan;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  color: red;
+}
+
+
+.name-group{
+  background-color: green;
+}
+
+
+.bg-primary{
+  background-color: black;
+  color: cyan;
+}
+
+.first-input{
+  padding: 10px;
+  border: 10px solid red;
+  margin: 5px;
+}
