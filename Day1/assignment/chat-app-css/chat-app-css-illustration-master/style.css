@@ -178,8 +178,13 @@ body {
   height: 12px;
   border: 1px solid hsl(289, 100%, 72%);
   border-radius: 50%;
-  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
 }
+
+
 
 .option strong {
   font-size: 12px;
