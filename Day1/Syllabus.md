@@ -38,3 +38,19 @@ form mdin ul / li homework
 css
 border box
 content box
+
+
+OSI Model
+Open Systems Interconnection model is a reference model developed by ISO
+international organization of standardization that provides basis for the
+coordination of standards development for the purpose of systems interconnection.
+
+
+  OSI Model by Layer:
+    7. Application layer
+    6. Presentation layer
+    5. Session layer
+    4. Transport layer
+    3. Network layer
+    2. Data link layer
+    1. physical layer.

@@ -50,12 +50,12 @@ body {
   padding: 40px 20px;
   max-width: 1200px;
   width: 100%;
-  position: relative; /* Required for z-index */
-  z-index: 10; /* Higher than background shapes */
+  position: relative;
+  z-index: 10;
 }
 
 .phone {
-  width: 250px;
+  width: 300px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 30px;
   padding: 10px;
@@ -212,6 +212,7 @@ body {
   align-items: center;
   color: hsl(206, 6%, 79%);
   margin-top: 8px;
+
 }
 
 .send-btn {
@@ -249,7 +250,7 @@ body {
 .message-input {
   border: none;
   outline: none;
-  font-size: 8px;
+  font-size: 14px;
   width: 100%;
 }
 
