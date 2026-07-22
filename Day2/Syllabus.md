@@ -1,5 +1,9 @@
+links
 upkraft day 2
 https://upkraft-course.suparth.com.np/courses/git-github#/
+
+ssh setup
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 
 pwd - print win directory
@@ -18,3 +22,9 @@ git push -u origin main
 version create garnu vaneko nai commit ho
 
 convententional commit message.
+git log hash
+
+PS C:\ArbinBhasimaAISoftware\AISoftwareDeveloperCourse\AISoftwareDeveloper> git remote -v
+origin  https://github.com/ArbinBhasimaOfficial/AiSoftwareDev.git (fetch)
+origin  https://github.com/ArbinBhasimaOfficial/AiSoftwareDev.git (push)
+PS C:\ArbinBhasimaAISoftware\AISoftwareDeveloperCourse\AISoftwareDeveloper>
