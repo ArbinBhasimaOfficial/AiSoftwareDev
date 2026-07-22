@@ -15,3 +15,6 @@ git commit -m "Initial Commit For First Commit."
 git push -u origin main
 
 
+version create garnu vaneko nai commit ho
+
+convententional commit message.
