@@ -28,3 +28,12 @@ PS C:\ArbinBhasimaAISoftware\AISoftwareDeveloperCourse\AISoftwareDeveloper> git 
 origin  https://github.com/ArbinBhasimaOfficial/AiSoftwareDev.git (fetch)
 origin  https://github.com/ArbinBhasimaOfficial/AiSoftwareDev.git (push)
 PS C:\ArbinBhasimaAISoftware\AISoftwareDeveloperCourse\AISoftwareDeveloper>
+
+
+git add . this only changes on inside directory
+
+git add -A this changes all the directory even if you are inside the initialied git and inside it.
+
+fork.
+merging
+basing
