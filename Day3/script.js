@@ -16,8 +16,11 @@ let x = 5  + 2
 // boolean expression
 let y = 5 < 10
 
-// left sheft operation
-let z = 5 == 5
+// left shift operation
+let z = 5 << 5
+
+// right shift operation
+let a = 5 >> 5
 
 // Variables
 
