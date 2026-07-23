@@ -218,3 +218,7 @@ branch
     after the branch is updated
       git push wont work unless if you set it up again like
         git push -u origin feature-1
+
+  git branch -m  // rename this creates the new file
+
+  git diff main...feature-1
