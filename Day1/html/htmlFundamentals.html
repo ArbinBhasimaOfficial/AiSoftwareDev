@@ -1,0 +1,166 @@
+<!-- HTML Fundamentals -->
+<!-- Structure and meaning for every web page -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Fundamentals</title>
+  </head>
+  <body>
+    <h3>What is HTML?</h3>
+    <p>HyperText Markup Language.</p>
+    <p>
+      HTML describes the structure and meaning of web content -- headings,
+      paragraphs, links, images, forms and sections.
+    </p>
+    <strong
+      >Important: HTML is a markup language, not a programming language</strong
+    >
+    <p>
+      It labels content so browsers know what each part is, not how to compute
+      anything.
+    </p>
+    <!-- h1,h2,h3,h4,h5,h6 Headings -->
+    <!-- p paragraphs -->
+    <!-- link Links the other sources to this web page. -->
+    <!-- img adds images to the web page -->
+    <!-- form creates an forms which can be filled up by the user. -->
+    <!-- section used to created the sections of the web page. like header section, nav section, footer section, hero section -->
+
+    <h2>HTML elements</h2>
+    <p>Open, content, close. That's it.</p>
+    <!-- <p> opening tag -->
+    <!-- Hello, world! content  -->
+    <!-- </p> closing tag -->
+    <!-- together they form a complete element  -->
+
+    <!-- <img src="photo.jpg" alt="A Dog."/> Some elements are self closing because they connot contain anything.  -->
+
+    <h2>HTML attributes</h2>
+    <p>Extra information attached to an element.</p>
+    <!-- attributes provide additional information about the element -->
+    <!-- live in the opening tag as name="value" pairs  -->
+    <!-- href defines the link destination  -->
+    <!-- target controls where the link opens  -->
+    <a href="https://www.google.com" target="_blank">
+        Google
+    </a>
+
+    <!-- Headings and paragraphs -->
+    <!-- heading level describes hierarchy, not just size -->
+     <h1>Main Page Title</h1>
+     <h2>Section Title</h2>
+     <h3>Subsection title</h3>
+     <p>This is a paragraph of text.</p>
+
+    <!-- links and images -->
+    <!-- meaningful alt text matters -- for humans and machines -->
+    <!-- a link is an anchor, points somewhere -->
+    <a href="https://Youtube.com">Visit Youtube</a> 
+
+    <!-- alt describes the image, for screen readers, search engines and broken loads. -->
+    <img src="dog1-jpg" alt="Manon the dog." />
+
+    <!-- common misconception, empty alt is not banned for purely decorative images use alt="". just never omit the attribute -->
+
+    <!-- lists, unordered for sets. ordered for steps -->
+    <!-- unordered -->
+    <ul>
+        <li>Dog</li>
+        <li>Cat</li>
+        <li>Rabbit</li>
+    </ul>
+
+    <!-- ordered -->
+    <ol>
+        <li>write code</li>
+        <li>save file</li>
+        <li>open on browser</li>
+    </ol>
+
+    <!-- 
+        containers
+        A div groups things - nothing more
+        A div is a generic container
+        it has no meaning by itself. Use it when nothing more specific fits.
+    -->
+    <div>
+        <h2>Animals</h2>
+        <p>The pet animals are cute.</p>
+    </div>
+
+    <!-- 
+        Semantic HTML
+        Tags that describes purpose, not just shape
+
+        header introductory content, usually at the top of a page
+        nav primary navigation links
+        main the main content of the page -- one per page
+        section the thematic grouping content
+        article a self contained piece of content
+        footer closing content, usually the bottom of a page.
+
+        important
+        meaning helps assistive tech 
+        screen readers and search engines can navigate a semantic page far more usefully than a soup of divs
+        
+    -->
+
+    <!-- semantic page structure, one page meaningful regions-->
+    <!-- <header>
+        <nav>...</nav>
+    </header>
+    <main>
+        <section>...</section>
+        <section>...</section>
+    /main>
+    <footer>...</footer> 
+    -->
+
+    <!-- Buttons and inputs, interactive controls always need labels. -->
+    <!-- labels describes inputs, screen reader read them. clicks focus the input -->
+    <lebel for="name">name</lebel> 
+
+    <!-- inputs collect information type controls the keyboard and validation -->
+    <input id="name" type="text"/>
+
+    <!-- button triggers actions, type="button" avoids implicit form submits. -->
+    <button type="button">Submit</button>
+
+    <!-- a basic form, six ingredients -- always -->
+    <!-- 
+    1 form
+    2 label
+    3 input
+    4 input type
+    5 required field
+    6 submit button
+    -->
+     <!-- <form>
+        <label for="email">Email</label>
+        <input id="email" type="email" required />
+
+        <button type="submit">Submit</button>
+     </form> -->
+
+
+     <!-- html nesting, open close in the correct order -- always -->
+    <section>
+        <h2>Course</h2>
+        <p>Learn web development</p>
+    </section>
+  </body>
+</html>
+
+<!-- A basic HTML document -->
+<!-- <!doctype html> document declaration -- tells the browser that this is modern HTML.
+<html lang="en"> Root element of the page, language is English.
+  <head> metadata, holds info about the page -- title, character set, viewport, links and more
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Fundamentals</title>
+  </head>
+  <body><h1>Hajimemasite</h1></body> visible content of the page, users sees the body part of the page in browser.
+</html> -->
