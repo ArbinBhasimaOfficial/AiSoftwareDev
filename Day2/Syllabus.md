@@ -214,3 +214,7 @@ branch
 // main branch is default branch
 
   Testing a new branch feature-1
+
+    after the branch is updated
+      git push wont work unless if you set it up again like
+        git push -u origin feature-1
