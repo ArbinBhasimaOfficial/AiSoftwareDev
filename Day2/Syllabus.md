@@ -60,7 +60,7 @@ fork.
 merging
 
     Git merging is the process of combining changes from one branch into another branch. In Git, its how you bring separate lines of development back together.
-    
+
     Step-by-Step: How to Merge Branches
 
     Here is the standard workflow to merge a branch called feature-chat-ui into main:
@@ -69,38 +69,38 @@ merging
     Make sure all your changes on your feature branch are committed or stashed.
     Bash
 
-    git add .
-    git commit -m "Finish chat UI component"
+      git add .
+      git commit -m "Finish chat UI component"
 
     2. Switch to the Target Branch
 
     You must be standing inside the branch that will receive the code (e.g., main).
     Bash
 
-    git checkout main
-    or
-    git switch main
+      git checkout main
+      or
+      git switch main
 
     3. Pull the Latest Remote Changes
 
     Ensure your local main branch is completely up to date with the remote server before merging.
     Bash
 
-    git pull origin main
+      git pull origin main
 
     4. Merge the Feature Branch
 
     Run the git merge command followed by the name of the branch you want to bring in.
     Bash
 
-    git merge feature-chat-ui
+      git merge feature-chat-ui
 
     5. Push the Merged Code
 
     Upload the newly combined branch back to GitHub or GitLab.
     Bash
 
-    git push origin main
+      git push origin main
 
     What About Merge Conflicts?
 
@@ -138,24 +138,24 @@ rebasing
     Commit or stash any uncommitted changes on your branch.
     Bash
 
-    git add .
-    git commit -m "Finish styling option cards"
+      git add .
+      git commit -m "Finish styling option cards"
 
     2. Update Your Local Main Branch
 
     Switch to main and pull down the latest code from GitHub/GitLab.
     Bash
 
-    git checkout main
-    git pull origin main
+      git checkout main
+      git pull origin main
 
     3. Rebase Your Feature Branch
 
     Switch back to your feature branch and tell Git to rebase it onto main:
     Bash
 
-    git checkout feature-chat-ui
-    git rebase main
+      git checkout feature-chat-ui
+      git rebase main
 
         What happens here: Git moves your feature branch's base to the head of main and re-applies your commits one by one.
 
@@ -187,3 +187,28 @@ rebasing
         Feature branches that only you are working on.
 
     If other developers are actively pulling and working on the same branch, rebasing will cause massive sync errors for them.
+
+
+branch
+  Basic Branch Commands Action Git Command
+
+  View branches
+    git branch
+
+  Create a new branch
+    git branch <branch-name>
+
+  Switch to a branch
+    git checkout <branch-name> (or git switch <branch-name>)
+
+  Create & switch in 1 step
+    git checkout -b <branch-name>
+
+  Merge into current branch
+    git merge <branch-name>
+
+  Delete a branch
+    git branch -d <branch-name>
+
+
+// main branch is default branch
