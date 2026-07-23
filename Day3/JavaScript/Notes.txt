@@ -1,0 +1,123 @@
+What is JavaScript?
+    The language that adds behaviour to the web
+
+    JavaScript adds logic, behaviour and interactivity to applications
+
+    Responds to clicks
+    Validate forms
+    update page content
+    talk to servers
+    process data
+    run on node.js(backend)
+
+    Connecting JavaScript
+        Load your script from HTML
+
+        <script src="script.js" defer></script>
+
+            <script></script> this element tells you that what ever inside it is an JavaScript actions 
+
+            src points to the JavaScript file
+
+            defer waits for HTML to parse befor runnning
+
+            Place it in <head> with defer or at the end of <body> where defer is not needed cuz html loads first.
+
+    first JavaScript
+        The console is where JavaScript talks back
+
+        console.log("Hajimemasite Arubin Desu.")
+        which prints 
+            Hajimemasite Arubin Desu.
+        on console
+
+        Open devtools (F12 -> Console tab. Type 1 + 1 and press enter. it will provide you with the ans which is 2)
+
+    Statements and expressions
+        Two everyday building blocks.
+
+            expressions
+                const total = 10 + 5;
+                which produces a value. 10 + 5 -> 15
+            
+            Statement 
+                console.log(total)
+                performs an action. const total = ans.
+                in this statement it show the value of toal in console
+
+    Comments
+        Explain why. Never restate obvious what.
+
+        // single line Comments
+        /*
+            multi 
+            line comment
+        */
+
+    Variables
+        Named references to values.
+            const   
+                Cannot be reassigned. Prefer by default
+                const FullName = "Arbin Bhasima";
+            
+            let
+                Reassignable. Use when the value must change.
+                let age = 23;
+
+            var
+                var is legacy
+                Function-scoped and full of surprises. Only recognise it in old code.
+
+            const vs let
+                Reassignement is the only difference beginners need 
+
+                const name = "Arbin Bhasima"
+                let currentAge = 23;
+                currentAge = 24;
+            
+                IMPORTANT
+                    const does not mean frozen
+                    Object properties can still change. Only the binding is locked.
+
+
+            Naming Variables    
+                Names are documentation
+                    goode conventions
+                        const studentName = "Arbin"
+                        const isLoggedIn = true
+                        const totalPrice = 35000
+
+                    bad conventions
+                        const x = "Arbin"
+                        const data = true
+                        const temp = 35000
+
+                Convention camelCase - first word lowercase, each next word capitalised
+
+    Primitive Data Types
+        Simple, immutable values
+
+            String = "text"
+            Number = 42
+            Boolean = true / false
+            Undefined; 
+            Null = Null intentional absence
+            BigInt = very large integers 100000000 or more
+            Symbol = unique identifier
+
+        Focus for beginners: String - Number - Boolean - Undefined - Null
+
+    Checking Types
+        typeof returns a String
+            common misconception
+
+                typeof null is "objec"
+
+            A long standing js quirk. Not a bug you can fix just something to recognise
+
+
+    Objects
+        Group related values under named keys
+            Objects group related values
+            values live under keys (also called properties)
+            keys are strings; value can be anything
