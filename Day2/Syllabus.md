@@ -212,3 +212,18 @@ branch
 
 
 // main branch is default branch
+
+  Testing a new branch feature-1
+
+    after the branch is updated
+      git push wont work unless if you set it up again like
+        git push -u origin feature-1
+
+  git branch -m  // rename this creates the new file
+
+  git diff main...feature-1
+
+https://github.com/ArbinBhasimaOfficial/AiSoftwareDev/pull/1
+
+pull : #id
+title
