@@ -1,0 +1,195 @@
+CSS Fundamentals
+    Colours, spacing, typography, layout
+
+What is CSS?
+    CSS - Cascading Style Sheets.
+
+    CSS controls how HTML content looks and is laid out.
+
+    Colours 
+    Fonts
+    Spacing
+    Borders
+    Sizing
+    Positioning
+    Responsive Layouts
+
+Connecting CSS  
+    External stylesheets are the standard for this course.
+
+    <head>
+        <link rel="stylesheets" href="styles.css">
+    </head>
+
+    External 
+        A .css file linked from the head. resuable and caheable
+
+    internal
+        style block inside the html. handy for demos
+
+    inline
+        style="_" on an element. use sparingly
+
+CSS rule anatomy
+    Selector, then declarations inside braces.
+
+common selectors 
+    element 
+    id 
+    class 
+    pseudo class
+
+css classes
+
+    class = "greeting"
+
+    .greeting{
+        ...
+    }
+
+Colours
+    color: black;
+    background-color: cyan;
+    border-color: cyan
+
+typography
+    family, size, weight, line height
+
+
+the box model
+    every element is a nested set of boxes
+
+        margin
+        border
+        padding
+        content
+
+    box model in code
+        sizes stack outward from the content
+
+        320x
+        24px
+        1px
+        16px
+
+width and height
+    flexible sizing beats fixed sizing
+
+    fixed 
+        width: 320px -- exact, but brittle
+
+    percentage
+        width: 100% -- scales with parent
+
+    Max/min
+        constrain a flexible size
+
+    Careful
+        Avoid fixed heights for text
+        content grows. boxes should too
+
+
+display types
+
+    how an element flows in the page
+
+        block 
+            takes a full line div, p, section
+
+        inline
+            sits inside text, span, a
+
+        inline-block
+            inline flow but has its own size
+
+        none
+            removed from the layout entirely
+
+Flexbox
+    one dimensional layout -- rows or columns
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        justify-content: space-between;
+
+    main axis usually horizontal
+    cross axis perpendicular to main
+    gap space between items
+    align items cross axis alignment
+    justify content main-axis distribution
+
+justify content . align items
+    same items, different arrangement
+
+    justify-content
+    flex-start 
+    center
+    space-between
+
+    align-items
+    flex-start
+    center
+    stretch
+
+css grid
+    two dimensional layout -- rows and columns together
+
+
+flexbox vs grid
+
+    different tools, overlapping problem
+
+    flexbox best for one-dimensional rows or columns
+    grid best for rows and columns together
+
+borders and radius
+    A hairline border with soft radius reads modern
+
+Shadows
+    depth is a hierarchy signal, not decoration
+
+
+positions
+    static relative absolute fixed sticky
+
+    static default 
+        flows with the document. top/ left do nothing
+
+    relative    
+        still in flow -- nudged by top / left / right / bottom
+
+    absolute
+        pulled out of flow. Anchored to nearest positioned ancestor.
+
+    fixed sticky
+        fixed pins to the viewpor. sticky sticks once scrolled to
+
+transform
+    move rotate scale and skew -- with out touching layout
+
+transitions 
+    interpolate between two states over time
+
+@keyframes and animation
+    multi-step, looping motion -- no interaction required
+
+Responsive desgin
+    one page - many screen sizes
+
+    flexible widths
+        percentage, maxwidth fr units
+
+    wrapping Layouts    
+        flex wrap auto fit grids
+
+    Media queries
+        adjust styles at breakpoints
+
+    Mobile first
+        start narrow enhance for wide screens
+
+Media queries   
+    conditional css by viewport size
+
+        narrow one columns
+        wide three columns

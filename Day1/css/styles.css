@@ -1,0 +1,22 @@
+.course-title{
+    color: cyan;
+    font-size: 48px;
+}
+/* selector is .course-title */
+/* property is color and font-size */
+/* value is cyan which is text color and 48px which is text size */
+/* declaration color: cyan; */
+/* declaration block {...} */
+
+
+/* element selector, p - every paragraph */
+p {}
+
+/* class selector, .card -- anything with class="card" */
+.card {}
+
+/* id selector, #main -- the one element with id="main */
+#main{}
+
+/* pseudo class, :hover triggers on mouse over */
+button:hover{}
