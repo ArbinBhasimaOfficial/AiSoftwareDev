@@ -3,20 +3,33 @@ const student = {
     age: 23,
     isActive: true,
 }
+const student2 = {
+    name: "Arbin",
+    age: 23,
+    isActive: true,
+}
+
+const student1 = student //  this is true cuz this is allocation of memory address of student to student1
+
+// student 1 and 2 is stored on different memory address so it is not equal
+
+// stored in student stores memory address of the object
+
 
 // accessing object properties using dot notation
-// student.name 
+// student.name
 
 // accessing object properties using bracket notation
 // student["age"]
 
-// dot for known keys 
+// dot for known keys
 // and bracket for dynamic keys
 
-console.log(student.name); // Output: Arbin
+console.log(student.name); // Output: Arbin // can perform string manipulations like at()
+console.log(student.name.at(4))
 console.log(student.age); // Output: 23
 console.log(student.isActive); // Output: true
-console.log(`Student name is ${student.name}, age is ${student.age}, and is active: ${student.isActive}`); 
+console.log(`Student name is ${student.name}, age is ${student.age}, and is active: ${student.isActive}`);
 
 // updating object properties
 student.age = 24; // updating age property
@@ -33,3 +46,25 @@ console.log(`Student course: ${student.course}, new property added successfully`
 // deleting properties from the object
 // delete student.isActive; // deleting the isActive property
 // console.log(`Student is active: ${student.isActive}`); // Output: Student is active: undefined
+
+
+
+// class is instance
+// in js key value pair
+
+// accessing with square brackets
+// student["his home"];
+
+
+
+// null is empty so it is an Object
+
+// prototyping
+// donot do this
+// student.__proto__ = student2
+// console.log(student)
+
+// Proxy()
+
+
+
