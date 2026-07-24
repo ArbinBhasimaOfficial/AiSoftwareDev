@@ -1,70 +1,107 @@
+// 1. Choice Variables
 let choice1 = "rock";
 let choice2 = "paper";
 let choice3 = "scissors";
 
+// 2. Score Variables
 let playerScore = 0;
 let computerScore = 0;
 
-// 1. Set the player's choice (Change this to choice1, choice2, or choice3 to test)
-let playerChoice = choice1;
+// 3. Grab HTML elements using their IDs
+let playerScoreDisplay = document.getElementById("PlayerScore");
+let computerScoreDisplay = document.getElementById("ComputerScore");
+let choicesDisplay = document.getElementById("ChoicesDisplay");
+let resultMsg = document.getElementById("ResultMsg");
 
-// 2. Pick a random choice for the computer (1 = rock, 2 = paper, 3 = scissors)
-let randomNumber = Math.floor(Math.random() * 3) + 1;
-let computerChoice = "";
+let rockBtn = document.getElementById("rockBtn");
+let paperBtn = document.getElementById("paperBtn");
+let scissorBtn = document.getElementById("scissorBtn");
+let playAgainBtn = document.getElementById("PlayAgainBtn");
 
-if (randomNumber === 1) {
-  computerChoice = choice1;
-}
-if (randomNumber === 2) {
-  computerChoice = choice2;
-}
-if (randomNumber === 3) {
-  computerChoice = choice3;
-}
 
-// 3. IF Statements to check who wins
+// 4. Main Game Function (Runs every time a player clicks a button)
+function playGame(playerChoice) {
+  
+  // Computer chooses a random move
+  let randomNumber = Math.floor(Math.random() * 3) + 1;
+  let computerChoice = "";
 
-// IF IT'S A TIE
-if (playerChoice === computerChoice) {
-  console.log("It's a tie!");
-}
+  if (randomNumber === 1) { computerChoice = choice1; }
+  if (randomNumber === 2) { computerChoice = choice2; }
+  if (randomNumber === 3) { computerChoice = choice3; }
 
-// IF PLAYER CHOSE ROCK
-if (playerChoice === choice1) {
-  if (computerChoice === choice2) {
-    console.log("Computer wins! Paper beats Rock.");
-    computerScore = computerScore + 1;
+  // Display chosen moves on screen
+  choicesDisplay.textContent = "You: " + playerChoice + " | Computer: " + computerChoice;
+
+  // --- GAME LOGIC ---
+
+  // TIE
+  if (playerChoice === computerChoice) {
+    resultMsg.textContent = "It's a tie! 🤝";
   }
-  if (computerChoice === choice3) {
-    console.log("You win! Rock beats Scissors.");
-    playerScore = playerScore + 1;
+
+  // PLAYER CHOSE ROCK
+  if (playerChoice === choice1) {
+    if (computerChoice === choice2) {
+      resultMsg.textContent = "Computer wins! Paper beats Rock.";
+      computerScore = computerScore + 1;
+    }
+    if (computerChoice === choice3) {
+      resultMsg.textContent = "You win! Rock beats Scissors.";
+      playerScore = playerScore + 1;
+    }
   }
+
+  // PLAYER CHOSE PAPER
+  if (playerChoice === choice2) {
+    if (computerChoice === choice1) {
+      resultMsg.textContent = "You win! Paper beats Rock.";
+      playerScore = playerScore + 1;
+    }
+    if (computerChoice === choice3) {
+      resultMsg.textContent = "Computer wins! Scissors beats Paper.";
+      computerScore = computerScore + 1;
+    }
+  }
+
+  // PLAYER CHOSE SCISSORS
+  if (playerChoice === choice3) {
+    if (computerChoice === choice1) {
+      resultMsg.textContent = "Computer wins! Rock beats Scissors.";
+      computerScore = computerScore + 1;
+    }
+    if (computerChoice === choice2) {
+      resultMsg.textContent = "You win! Scissors beats Paper.";
+      playerScore = playerScore + 1;
+    }
+  }
+
+  // Update scores on screen
+  playerScoreDisplay.textContent = playerScore;
+  computerScoreDisplay.textContent = computerScore;
 }
 
-// IF PLAYER CHOSE PAPER
-if (playerChoice === choice2) {
-  if (computerChoice === choice1) {
-    console.log("You win! Paper beats Rock.");
-    playerScore = playerScore + 1;
-  }
-  if (computerChoice === choice3) {
-    console.log("Computer wins! Scissors beats Paper.");
-    computerScore = computerScore + 1;
-  }
-}
 
-// IF PLAYER CHOSE SCISSORS
-if (playerChoice === choice3) {
-  if (computerChoice === choice1) {
-    console.log("Computer wins! Rock beats Scissors.");
-    computerScore = computerScore + 1;
-  }
-  if (computerChoice === choice2) {
-    console.log("You win! Scissors beats Paper.");
-    playerScore = playerScore + 1;
-  }
-}
+// 5. Button Click Listeners
 
-// Print updated scores
-console.log("Player Score: " + playerScore);
-console.log("Computer Score: " + computerScore);
+rockBtn.onclick = function() {
+  playGame(choice1);
+};
+
+paperBtn.onclick = function() {
+  playGame(choice2);
+};
+
+scissorBtn.onclick = function() {
+  playGame(choice3);
+};
+
+// Reset Game / Play Again
+playAgainBtn.onclick = function() {
+  playerScore = 0;
+  computerScore = 0;
+  playerScoreDisplay.textContent = 0;
+  computerScoreDisplay.textContent = 0;
+  choicesDisplay.textContent = "Make your Choice!";
+  resultMsg.textContent = "First to 3 wins!";
+};
