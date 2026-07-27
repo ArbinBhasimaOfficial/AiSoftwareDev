@@ -21,7 +21,7 @@ let playAgainBtn = document.getElementById("PlayAgainBtn");
 
 // 4. Main Game Function (Runs every time a player clicks a button)
 function playGame(playerChoice) {
-  
+
   // Computer chooses a random move
   let randomNumber = Math.floor(Math.random() * 3) + 1;
   let computerChoice = "";
@@ -37,7 +37,7 @@ function playGame(playerChoice) {
 
   // TIE
   if (playerChoice === computerChoice) {
-    resultMsg.textContent = "It's a tie! 🤝";
+    resultMsg.textContent = "It's a tie!";
   }
 
   // PLAYER CHOSE ROCK
