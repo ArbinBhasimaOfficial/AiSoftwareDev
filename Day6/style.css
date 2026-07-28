@@ -1,0 +1,13 @@
+:root{
+  --bg-primary: cyan
+}
+
+.box{
+  background-color: var(--bg-primary)
+  width: 48px
+  height: 48px
+}
+
+.btn {
+  background-color: var(--bg-primary)
+}
