@@ -1,0 +1,25 @@
+{
+  "name": "adventofcode",
+  "version": "1.0.0",
+  "description": "advent of code",
+  "homepage": "https://github.com/ArbinBhasimaOfficial/AiSoftwareDev#readme",
+  "bugs": {
+    "url": "https://github.com/ArbinBhasimaOfficial/AiSoftwareDev/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArbinBhasimaOfficial/AiSoftwareDev.git"
+  },
+  "author": "ArbinBhasima",
+  "type": "module",
+  "main": "Day1AdventOfCode.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "dependencies": {
+    "@types/node": "^26.1.1"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

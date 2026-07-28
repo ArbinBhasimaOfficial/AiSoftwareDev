@@ -1,0 +1,157 @@
+// Day1
+
+// The elves have good news and bad news
+
+// the good news is that they've discovered project management
+// this has given them the tools they need to prevent their usual christmas emergency
+// for e.g 
+// they now know that the north pole decorations need to be finished soon so that other critical tasks can start on time
+
+// bad news is that they've realized they have a different emergency according to their resource planning
+// none of them have any time left to decorate the north pole
+
+// to save christmas the elves need you to finish decorating the north pole by december 12th
+
+// collect stars by solving puzzles.
+// two puzzles will be made available on each day
+
+// the second puzzle is unlocked when you complete the first
+// each puzzle grants one star.
+
+// you arrive at the secret entrance to the north pole base ready to start decorating.
+// unfortunately the password seems to have been changed
+// so you can't get in 
+// a document taped to the wall helpfully explains
+
+// Due to new security protocols the password is locked in the sage below
+// please see the attached document for the new combination
+
+// the safe has a dial with only an arrow on it; 
+// around te dial are the numbers 0 through 99 in order
+// as you turn the dial it makes a small click noise as it reaches each number
+
+// the attached document (your puzzle input) contains a sequence of rotations, 
+// one per line, which tell you how to open the safe.
+// a rotation starts with an L or R which indicates whether the rotation shoulw be to the left
+// (toward lower numbers) or to the right (toward higher numbers).
+// then the rotation has a distance value which indicates how many clicks the dial
+// should be rotated in that direction 
+
+
+// so if the dial were pointing at 11, a rotation of R8 would cause the dial to point at 19
+// after that a rotation of L19 would cause it to point at 0
+
+// because the dial is a circle, turning the dial left from 0 one click makes it point at 99
+// similarly turning the dial right from 99 one click makes it point at 0
+
+// so if the dial were pointing at 5 a rotation of l10 would cause it to point at 95 
+// after that a rotation of l10 would cause it to point at 95 after that
+// a rotation of r5 could cause it to point at 0
+
+// the dial starts by pointing at 50 
+
+// recent requires official north pole secret entrance security training seminar taught tou that
+// the safe is actually a decoy the actual password is the number of times the dial is left 
+// pointing at 0 after any rotation in the sequence
+
+
+
+// for e.g suppose the attached document contained the following rotations
+
+// L68
+// L30
+// R48
+// L5
+// R60
+// L55
+// L1
+// L99
+// R14
+// L82
+
+
+// rotations 
+
+// the dial starts by pointing at 50
+// the dial is rotated L68 to point at 82
+// the dial is rotated L30 to point at 52
+// the dial is rotated R48 to point at 0
+// the dial is rotated L5 to point at 95
+// the dial is rotated R60 to point at 55
+// the dial is rotated L55 to point at 0
+// the dial is rotated L1 to point at 99
+// the dial is rotated L99 to point at 0
+// the dial is rotated R14 to point at 14
+// the dial is rotated L82 to point at 32
+
+
+// because the dial points at 0 a total of three times during this process
+// the password in this example is 3 
+
+// Analyze the rotations in your attached document. 
+// what is the actual password to open the door 
+
+
+// ********************* Part One ***********************
+
+starting point of the dial is at the position of 50
+L means left 
+R means right
+max dial range is 100 which move pasts the 99 wraps back arount the 0 like a circle
+
+which becomes 
+
+const start = 50
+const max = 100
+
+
+reading the file 
+sample and input file 
+
+sample-input.txt
+const input = await fs.readFile("../sample-input.txt", "utf-8")
+zionPartOne(input.split("\n"))
+
+input.txt
+const input = await fs.readFile("../input.txt", "utf-8")
+zionPartOne(input.split("\n"))
+
+reads the file  asynchronously
+.split("\n") converts the text into an array of string commands.
+
+parsing and processing each rotation 
+inside zionPartOne, a forEach loop processes every command string
+
+1. extract directions & distance
+const direction = rotations.slice(0,1)
+this is the direction right and left it gets the first letter L or R
+
+const value = Number(rotations.slice(1))
+
+this gets the remaining numbers after L or R 
+
+
+2 handling the right function
+if (direction === "R") {
+  current = (current + value) % max;
+}
+Adds value to the position.
+
+The % max (modulo operator) ensures that if position exceeds 99, it wraps around back to 0
+
+3 handling the left function
+} else if (direction === "L") {
+  current = (current - value) % max;
+  if (current < 0) {
+    current = max + current;
+  }
+}
+Subtracts value from position.
+
+If position drops below 0 (negative), max + current wraps it back into the 0–99 range.
+
+Count Hits on Zero:
+if (current === 0) {
+  password += 1;
+}
+Increments password by 1 every time the dial stops at position 0
