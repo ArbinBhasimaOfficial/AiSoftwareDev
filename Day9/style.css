@@ -1,0 +1,12 @@
+[data-attribute-name]{
+    background-color: cyan;
+}
+
+[data-attribute-name="attribute-value-1"]{
+    background-color: red;
+    color: white;
+}
+
+[data-sidebar-open="false"]{
+    display: none;
+}
